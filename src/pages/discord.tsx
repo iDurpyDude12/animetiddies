@@ -1,19 +1,9 @@
-import { Box, useDisclosure, Card, CardBody } from "@chakra-ui/react";
+import { useDisclosure, Card, CardBody } from "@chakra-ui/react";
 import * as React from "react";
 import BottomDivider from "src/components/BottomDivider";
-import NavBar from "src/components/NavBar";
 import TabHeader from "src/components/TabHeader";
 
-const Copyright = ({ username }) => (
-    <Box as="footer" textAlign="center" py={4}>
-        © {new Date().getFullYear()} {username}. All rights reserved.
-    </Box>
-);
-
 function Home() {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-    const [placement, setPlacement] = React.useState("left");
-
     return (
         <div>
             <TabHeader title={"Discord"} />
