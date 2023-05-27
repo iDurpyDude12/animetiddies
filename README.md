@@ -1,2 +1,2 @@
-# animetibbies
+# animetiddies
 Nextjs website
