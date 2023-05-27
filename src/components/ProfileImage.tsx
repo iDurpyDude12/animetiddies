@@ -18,5 +18,5 @@ export default function ProfileImage() {
         );
     }
 
-    return <Avatar name={session.user.name} src={session.user.image} loading={"eager"} />;
+    return <Avatar name={session?.user?.name} src={session?.user?.image} loading={"eager"} />;
 }
