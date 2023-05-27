@@ -6,7 +6,7 @@ import chakraTheme from "@chakra-ui/theme";
 import { SessionProvider } from "next-auth/react";
 import NavBar from "src/components/NavBar";
 
-export default function App({ Component, pageProps: { session, ...pageProps } }) {
+export default function App({ Component, pageProps: { session, ...pageProps } }: any) {
     return (
         <SessionProvider session={session}>
             <ChakraProvider theme={theme}>
