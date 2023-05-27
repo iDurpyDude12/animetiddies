@@ -16,7 +16,7 @@ export default function Images() {
                 var loadingText = document.getElementById("loadingText");
                 json = json.results[0];
                 console.log(json);
-                artist.textContent = "Artist: " + json.artist_name;
+                artist?.textContent = "Artist: " + json.artist_name;
                 source.textContent = "Source: " + json.source_url;
                 /* loadingText.textContent = "Loading..."; */
                 setImageUrl(json.url);
