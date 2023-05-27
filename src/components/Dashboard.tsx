@@ -38,7 +38,7 @@ export default function Dashboard() {
                 </CardBody>
             </Card>
             <Text fontSize={18} marginLeft={5} marginTop={5} marginRight={4}>
-                Hello <b>{session?.user.name ?? "anon"}</b>-nyan~ Welcome to the Dashboard!
+                Hello <b>{session?.user?.name ?? "anon"}</b>-nyan~ Welcome to the Dashboard!
             </Text>
             <SimpleGrid spacing={4} templateColumns="repeat(auto-fill, minmax(200px, 1fr))">
                 <DashboardCard hrefLink={"/images"} titleName={"Images"} heading={" Image API's"} text={"Get random images from a set of API's"} />
