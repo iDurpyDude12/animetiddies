@@ -10,11 +10,11 @@ export default function DashboardLink({
     heading,
     restricted = false
 }: {
-    hrefLink: string;
+    hrefLink: any;
     titleName: string;
     text: string;
     heading: string;
-    restricted: boolean;
+    restricted?: boolean;
 }) {
     const { data: session } = useSession();
 
