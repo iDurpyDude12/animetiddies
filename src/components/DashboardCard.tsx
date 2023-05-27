@@ -3,7 +3,19 @@ import NextLink from "next/link";
 import { LinkIcon } from "@chakra-ui/icons";
 import { useSession } from "next-auth/react";
 
-export default function DashboardLink({ hrefLink, titleName, text, heading, restricted = false }) {
+export default function DashboardLink({
+    hrefLink,
+    titleName,
+    text,
+    heading,
+    restricted = false
+}: {
+    hrefLink: string;
+    titleName: string;
+    text: string;
+    heading: string;
+    restricted: boolean;
+}) {
     const { data: session } = useSession();
 
     if (restricted && session == null) {
