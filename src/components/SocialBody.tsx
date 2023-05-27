@@ -10,7 +10,7 @@ export default function SocialBody() {
                 Socials
             </Text>
             <Flex align={"center"} direction={"column"}>
-                <SocialButton name="Twitter" href="https://twitter.com/uncoated1918" icon={<FaTwitter />} />
+                <SocialButton name="Twitter" href="https://twitter.com/" icon={<FaTwitter />} />
                 <SocialButton name="Discord | durpy#7880" href="https://discord.com/" icon={<FaDiscord />} />
                 <SocialButton name="AniList" href="https://anilist.co/user/durpyneko/" icon={<SiAnilist />} />
             </Flex>
