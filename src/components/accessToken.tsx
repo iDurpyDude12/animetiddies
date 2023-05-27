@@ -4,5 +4,5 @@ import { Box, Container } from "@chakra-ui/react";
 export default function Component() {
     const { data } = useSession();
 
-    return <div>Access Token: {data}</div>;
+    return `<div>Access Token: ${data}</div>`;
 }
