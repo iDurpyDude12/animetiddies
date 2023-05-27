@@ -5,7 +5,6 @@ import ImagesComponent from "src/components/NSFWImages";
 import { useSession } from "next-auth/react";
 import { Flex, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { useEffect } from "next";
 
 function NSFW() {
     const { data: session } = useSession();
