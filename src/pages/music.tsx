@@ -10,26 +10,7 @@ import TabHeader from "src/components/TabHeader";
 function Music() {
     const [videoUrl, setVideoUrl] = useState("");
 
-    /* const youtubeDL = require("youtube-dl"); */
-    const youtubeDL = require("youtube-dl-exec");
-    const apiKey = "AIzaSyDDMmeJ7vW-AYpPL1pWAQxtSI9EYDruYoI";
-    const videoId = videoUrl;
-
-    function ytDownload() {
-        fetch(`https://www.googleapis.com/youtube/v3/videos?id=${videoId}&key=${apiKey}&part=snippet`)
-            .then(response => response.json())
-            .then(data => {
-                // Extract the audio from the video using youtube-dl
-                const url = `https://www.youtube.com/watch?v=${videoId}`;
-                const options = ["-x", "--audio-format", "mp3"];
-                const video = youtubeDL(url, options);
-                video.on("info", info => {
-                    console.log(`Extracting audio from "${info.title}"...`);
-                });
-                video.pipe(fs.createWriteStream(`${data.items[0].snippet.title}.mp3`));
-            })
-            .catch(error => console.error(error));
-    }
+    function ytDownload() {}
 
     return (
         <div>
