@@ -11,8 +11,12 @@ export default function LoginPage() {
             <div>
                 <Flex direction="column" align="center">
                     <TabHeader title={"Sign In"} />
-                    <Text fontSize={"3xl"} marginTop={4}>Welcome, {session.user.name}!</Text>
-                    <Button onClick={() => signOut()} marginTop={4}>Sign Out</Button>
+                    <Text fontSize={"3xl"} marginTop={4}>
+                        Welcome, {session?.user?.name!}!
+                    </Text>
+                    <Button onClick={() => signOut()} marginTop={4}>
+                        Sign Out
+                    </Button>
                 </Flex>
             </div>
         );
@@ -21,8 +25,12 @@ export default function LoginPage() {
             <div>
                 <Flex direction="column" align="center">
                     <TabHeader title={"Sign In"} />
-                    <Text fontSize={"3xl"} marginTop={4}>You are not signed in</Text>
-                    <Button onClick={() => signIn()} marginTop={4}>Sign In</Button>
+                    <Text fontSize={"3xl"} marginTop={4}>
+                        You are not signed in
+                    </Text>
+                    <Button onClick={() => signIn()} marginTop={4}>
+                        Sign In
+                    </Button>
                 </Flex>
             </div>
         );
