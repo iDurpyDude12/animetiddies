@@ -77,7 +77,7 @@ export default function NavBar() {
                                 <h2>
                                     <AccordionButton>
                                         <Box as="span" flex="1" textAlign="left">
-                                            Image API's
+                                            Image API&apos;s
                                         </Box>
                                         <AccordionIcon />
                                     </AccordionButton>
@@ -148,7 +148,7 @@ export default function NavBar() {
                 onClick={onOpen}
                 cursor="pointer"></Button>
             <Text flex={1} fontWeight="bold" fontSize="xl" textAlign={"center"}>
-                Durpy's site
+                Durpy&apos;s site
             </Text>
             <Menu>
                 <MenuButton>

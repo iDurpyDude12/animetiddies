@@ -13,7 +13,7 @@ function About() {
 				This site is both my website and portfolio I guess.
 			</Text>
 			<Text fontSize={18} marginLeft={5} marginTop={5}>
-                i might add more to this later but for now here's some text. 
+                i might add more to this later but for now here&apos;s some text. 
             </Text>
             <BottomDivider />
         </div>
