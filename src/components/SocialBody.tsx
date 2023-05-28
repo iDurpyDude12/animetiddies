@@ -1,10 +1,10 @@
-import { Flex, Text } from "@chakra-ui/react"
-import SocialButton from "./SocialButton"
-import { FaTwitter, FaDiscord } from "react-icons/fa"
-import { SiAnilist } from "react-icons/si"
+import { Flex, Text } from "@chakra-ui/react";
+import SocialButton from "./SocialButton";
+import { FaTwitter, FaDiscord, FaGithub } from "react-icons/fa";
+import { SiAnilist } from "react-icons/si";
 
 export default function SocialBody() {
-    return(
+    return (
         <div>
             <Text fontSize={"3xl"} marginTop={4} align={"center"} marginBottom={2}>
                 Socials
@@ -13,8 +13,8 @@ export default function SocialBody() {
                 <SocialButton name="Twitter" href="https://twitter.com/" icon={<FaTwitter />} />
                 <SocialButton name="Discord | durpy#7880" href="https://discord.com/" icon={<FaDiscord />} />
                 <SocialButton name="AniList" href="https://anilist.co/user/durpyneko/" icon={<SiAnilist />} />
+                <SocialButton name="GitHub" href="https://github.com/iDurpyDude12" icon={<FaGithub />}></SocialButton>
             </Flex>
         </div>
-        
-    )
+    );
 }
