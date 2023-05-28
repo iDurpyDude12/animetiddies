@@ -46,7 +46,7 @@ export default function NavBar() {
             <Drawer placement={"left"} onClose={onClose} isOpen={isOpen}>
                 <DrawerOverlay />
                 <DrawerContent>
-                    <DrawerHeader borderBottomWidth="1px">Links</DrawerHeader>
+                    <DrawerHeader borderBottomWidth="1px">Pages</DrawerHeader>
                     <DrawerBody>
                         <Button
                             variant="ghost"
