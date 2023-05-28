@@ -10,10 +10,10 @@ export default function SocialBody() {
                 Socials
             </Text>
             <Flex align={"center"} direction={"column"}>
-                <SocialButton name="Twitter" href="https://twitter.com/" icon={<FaTwitter />} />
-                <SocialButton name="Discord | durpy#7880" href="https://discord.com/" icon={<FaDiscord />} />
-                <SocialButton name="AniList" href="https://anilist.co/user/durpyneko/" icon={<SiAnilist />} />
                 <SocialButton name="GitHub" href="https://github.com/iDurpyDude12" icon={<FaGithub />}></SocialButton>
+                <SocialButton name="Twitter" href="https://twitter.com/" icon={<FaTwitter />} />
+                <SocialButton name="AniList" href="https://anilist.co/user/durpyneko/" icon={<SiAnilist />} />
+                <SocialButton name="Discord | durpy#7880" href="https://discord.com/" icon={<FaDiscord />} />
             </Flex>
         </div>
     );
