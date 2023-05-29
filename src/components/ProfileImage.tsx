@@ -1,4 +1,4 @@
-import { Avatar, Text, HStack } from "@chakra-ui/react";
+import { Avatar, Text, HStack, Show, Hide } from "@chakra-ui/react";
 import { useSession } from "next-auth/react";
 
 export default function ProfileImage() {
@@ -7,7 +7,9 @@ export default function ProfileImage() {
     if (session == null) {
         return (
             <HStack>
-                <Text>Logged out</Text>
+                <Hide below="md">
+                    <Text>Logged out</Text>
+                </Hide>
                 <Avatar
                     name="anon"
                     src={"https://cdn.discordapp.com/attachments/1039951514631933992/1087477789474693120/default-user-icon-8-1269223776.jpg"}

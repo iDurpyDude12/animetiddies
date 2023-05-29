@@ -7,7 +7,7 @@ export default function SocialButton({ name, href, icon }: any) {
             href={href}
             target={"_blank"}
             flex={1}
-            width={"400px"}
+            w={[300, 400, 400]}
             borderRadius="5"
             textAlign={"center"}
             padding={3}
