@@ -19,6 +19,14 @@ const nextConfig = {
             use: ["@svgr/webpack"]
         });
         return config;
+    },
+    async rewrites() {
+        return [
+            {
+                source: "/api/GetStatus",
+                destination: "https://loadshedding.eskom.co.za/LoadShedding/GetStatus"
+            }
+        ];
     }
 };
 
