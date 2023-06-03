@@ -13,7 +13,7 @@ export default function ImagesComponent() {
 
     downloadImage(url);
     function downloadImage(url: any) {
-        fetch(url, {
+        /* fetch(url, {
             mode: "no-cors"
         })
             .then(response => response.blob())
@@ -25,7 +25,7 @@ export default function ImagesComponent() {
                 document.body.appendChild(a);
                 a.click();
                 a.remove();
-            });
+            }); */
     }
 
     const getNeko = () => {
