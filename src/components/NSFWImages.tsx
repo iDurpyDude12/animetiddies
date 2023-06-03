@@ -3,17 +3,35 @@ import { useState } from "react";
 import * as React from "react";
 
 export default function ImagesComponent() {
-    const [imageUrl, setImageUrl] = useState("https://media.discordapp.net/attachments/1039951514631933992/1086229302674214982/iu.png");
+    const [imageUrl, setImageUrl] = useState("assets/placeholder-image.png");
 
     const [loading, setLoading] = useState(false);
+
+    let downloadImageUrl;
+
+    const url = downloadImageUrl;
+
+    downloadImage(url);
+    function downloadImage(url: any) {
+        fetch(url, {
+            mode: "no-cors"
+        })
+            .then(response => response.blob())
+            .then(blob => {
+                let blobUrl = window.URL.createObjectURL(blob);
+                let a = document.createElement("a");
+                a.download = url.replace(/^.*[\\\/]/, "");
+                a.href = blobUrl;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+            });
+    }
 
     const getNeko = () => {
         fetch("https://api.waifu.pics/nsfw/neko")
             .then(response => response.json())
             .then(json => {
-                var artist = document.getElementById("artist");
-                var source = document.getElementById("source");
-                var loadingText = document.getElementById("loadingText");
                 setImageUrl(json.url);
                 const timer = setTimeout(() => {
                     setLoading(true);
@@ -24,15 +42,13 @@ export default function ImagesComponent() {
                     setLoading(false);
                 }, 2500);
                 () => clearTimeout(timer2);
+                downloadImageUrl = json.url;
             });
     };
     const getWaifu = () => {
         fetch("https://api.waifu.pics/nsfw/waifu")
             .then(response => response.json())
             .then(json => {
-                var artist = document.getElementById("artist");
-                var source = document.getElementById("source");
-                var loadingText = document.getElementById("loadingText");
                 setImageUrl(json.url);
                 const timer = setTimeout(() => {
                     setLoading(true);
@@ -43,9 +59,9 @@ export default function ImagesComponent() {
                     setLoading(false);
                 }, 2500);
                 () => clearTimeout(timer2);
+                downloadImageUrl = json.url;
             });
     };
-    const downImage = () => {};
 
     return (
         <Flex direction={"column"}>
@@ -96,7 +112,7 @@ export default function ImagesComponent() {
                             <Box boxSize="sm" paddingLeft={5} paddingTop={5} marginBottom={10}>
                                 <Image id="WaifuImage" maxHeight={400} maxWidth={335} src={imageUrl} alt="Image"></Image>
                             </Box>
-                            <Button onClick={downImage} colorScheme={"pink"} marginTop={4} width={100}>
+                            <Button id="downloadButton" onClick={downloadImage} colorScheme={"pink"} marginTop={4} width={100}>
                                 Download
                             </Button>
                             <Text flex={1} paddingLeft={5} marginTop={4}>
