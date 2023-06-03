@@ -4,11 +4,9 @@ import * as React from "react";
 
 export default function ImagesComponent() {
     const [imageUrl, setImageUrl] = useState("https://cdn.discordapp.com/attachments/1039951514631933992/1086229302674214982/iu.png");
-
     const [loading, setLoading] = useState(false);
 
     let downloadImageUrl;
-
     const url = downloadImageUrl;
 
     downloadImage(url);
