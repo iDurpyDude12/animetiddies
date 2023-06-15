@@ -28,7 +28,6 @@ import { LinkIcon, HamburgerIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
 import ProfileImage from "./ProfileImage";
 import LoginItem from "./LoginItem";
-import NavLink from "./NavLink";
 
 export default function NavBar() {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -94,7 +93,6 @@ export default function NavBar() {
                                             <LinkIcon marginRight={2}></LinkIcon>Images (Experimental)
                                         </Button>
                                     </NextLink>
-                                    <NavLink restricted={true} />
                                 </AccordionPanel>
                             </AccordionItem>
                             <AccordionItem>
