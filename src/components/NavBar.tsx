@@ -55,7 +55,7 @@ export default function NavBar() {
                             width={"100%"}
                             marginBottom={2}
                             onClick={onClose}>
-                            <NextLink href={"/"}>
+                            <NextLink href={"https://durpy.vercel.app/"}>
                                 <LinkIcon marginRight={2}></LinkIcon>Home
                             </NextLink>
                         </Button>
