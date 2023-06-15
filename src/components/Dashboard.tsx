@@ -45,13 +45,6 @@ export default function Dashboard() {
             <SimpleGrid spacing={4} templateColumns="repeat(auto-fill, minmax(200px, 1fr))">
                 <DashboardCard hrefLink={"/images"} titleName={"Images"} heading={" Image API's"} text={"Get random images from a set of API's"} />
                 <DashboardCard
-                    hrefLink={"/nsfw"}
-                    titleName={"NSFW"}
-                    heading={" NSFW Image API's"}
-                    text={"Get random NSFW images from a set of API's"}
-                    restricted={true}
-                />
-                <DashboardCard
                     hrefLink={"/music"}
                     titleName={"Music"}
                     heading={" Music"}
